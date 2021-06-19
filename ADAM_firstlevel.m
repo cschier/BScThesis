@@ -90,4 +90,4 @@ cfg.filenames = eeg_filenames;                              % data filenames
 cfg.class_spec{1} = cond_string(dot_lower);                 % the first stimulus class
 cfg.class_spec{2} = cond_string(dot_upper);                 % the second stimulus class
 cfg.outputdir = 'C:\MVPA\RESULTS\EEG_RAW\lower_RDK_vs_upper_RDK'; % where to save the results
-adam_MVPA_firstlevel(cfg);      % run first level analysis
+adam_MVPA_firstlevel(cfg);                                  % run first level analysis
