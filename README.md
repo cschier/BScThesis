@@ -3,6 +3,12 @@ This repository contains the analysis scripts used for the multivariate pattern 
 Due to repository size limitations, the raw data and the resulting (*.mat) Matlab structs are not available on GitHub.
 The analysis is executed using the [Amsterdam Decoding and Modelling Toolbox](https://github.com/fahrenfort/ADAM) developed by Fahrenfort et al. (2018).
 
+# Structure
+* **DATA**: This folder contains the raw EEG data. Each file contains all trials from one participant.
+* **RESULTS**: This folder contains all first-level classification results.
+* **`ADAM_firstlevel.m`**: Using this MATLAB script, the RESULTS were calculated with raw DATA input.
+* **`ADAM_secondlevel.m`**: Using this MATLAB script, the calculated RESULTS were analysed statistically and plotted.
+* **`eeg_stats.mat`** & **`mvpa_stats.mat`**: These MATLAB structs contain the variable outputs of `ADAM_secondlevel.m`.
 
 # Abstract
 Top-down attentional modulation of early neural processing is subject to ongoing research, but findings are inconsistent. 
