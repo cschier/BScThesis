@@ -1,6 +1,6 @@
 # Multivariate Pattern Analysis of Early Event-Related Potentials in Visual Attention Tasks - B.Sc. Thesis by Clara Schier (2021)
 This repository contains the analysis scripts used for the multivariate pattern analysis. 
-Due to repository size limitations, the raw data and the resulting (*.mat) Matlab structs are not available on GitHub.
+Due to repository size limitations, the raw data, the classification results and the MATLAB structs are not available on GitHub.
 The analysis is executed using the [Amsterdam Decoding and Modelling Toolbox](https://github.com/fahrenfort/ADAM) developed by Fahrenfort et al. (2018).
 
 # Structure
