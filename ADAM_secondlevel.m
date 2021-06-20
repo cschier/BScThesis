@@ -1,3 +1,8 @@
+%% DISCLAIMER
+% All configurations and analysis scripts were adopted from the tutorial-style 
+% manuscript explaining the use of the ADAM toolbox by Fahrenfort et al. (2018) 
+% and adjusted for to means of the present analysis.
+
 %% Start Toolbox and add dependencies
 clear;
 addpath('X:\Programme\Matlab\ADAM-1.0.4\install');
