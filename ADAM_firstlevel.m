@@ -1,3 +1,8 @@
+%% DISCLAIMER
+% All configurations and analysis scripts were adopted from the tutorial-style 
+% manuscript explaining the use of the ADAM toolbox by Fahrenfort et al. (2018) 
+% and adjusted for to means of the present analysis.
+
 %% Start ADAM Toolbox and add Dependencies
 clear;
 addpath('X:\Programme\Matlab\ADAM-1.0.4\install');
@@ -5,7 +10,6 @@ run('X:\Programme\Matlab\ADAM-1.0.4\install\startup.m');
 
 %% First Level
 % configurations
-
 eeg_filenames = {'HC101' 'HC102' 'HC103' 'HC104' 'HC105' 'HC106' ... 
     'HC107' 'HC108' 'HC110' 'HC115' 'HC116' 'HC119' 'HC120' 'HC121' ... 
     'HC123' 'HC124' 'HC125' 'HC126' 'HC127' 'HC129' 'HC132' 'HC133' ...
@@ -24,15 +28,15 @@ load_high = [12 22 32];
 % GENERAL ANALYSIS CONFIGURATION SETTINGS
 cfg = [];                       % clear the config variable
 cfg.datadir = 'C:\MVPA\DATA';   % this is where the raw data files are
-cfg.balance_classes_method = 'oversample'; % balance classes in training set (default 'oversample')
+cfg.balance_classes_method = 'oversample'; % balance classes in training set
 cfg.model = 'BDM';              % backward decoding model ('BDM') 
-cfg.raw_or_tfr = 'raw';         % classify raw or time frequency representations ('tfr')
-cfg.nfolds = 5;                 % the number of folds to use in k-fold cross-validation
-cfg.class_method = 'AUC';       % the performance measure to use (e.g. 'AUC' or 'accuracy')
+cfg.raw_or_tfr = 'raw';         % classify raw or time frequency representations
+cfg.nfolds = 5;                 % number of folds to use in k-fold cross-validation
+cfg.class_method = 'AUC';       % performance measure to use (e.g. 'AUC' or 'accuracy')
 cfg.crossclass = 'yes';         % whether to compute temporal generalization (yes/no)
-cfg.channelpool = 'EEG';        % the channel selection to use
-cfg.resample = 'no';            % downsample (useful for temporal generalization)
-cfg.erp_baseline = [-.1,0];     % baseline correction in sec. ('no' for no correction)
+cfg.channelpool = 'EEG';        % channel selection
+cfg.resample = 'no';            % downsampling
+cfg.erp_baseline = [-.1,0];     % baseline correction in sec.
 cfg.class_type = 'linear';      % which classifier to use: 'linear' for using LDA
 
 %%
